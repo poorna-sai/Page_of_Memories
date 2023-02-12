@@ -1,0 +1,128 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+* ,body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
+}
+body{
+    background-color: #152733;
+    margin: 0px;
+}
+
+    .inputfields{
+    width: 100%;
+    padding: 9px 10px;
+    text-align: left;
+    border: 1;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    }
+    .container{
+
+        padding: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+    }
+
+    
+    .card-form{
+        display: flex;
+      
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 40%;
+      height: auto;
+    }
+    
+    label{
+        float: left;
+        color: whitesmoke;
+        margin-top: 10px;
+    }
+    
+    .card-image{
+        position: relative;
+        width:150px;
+        height: 150px;
+        border: 3px solid;
+        background-image: url("{%static '/home/styles/images/profileavathar.png'%}");
+        background-size:100% 100%;
+        margin: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        
+    }
+    .profilepic{
+        position: absolute;
+        left: 0;
+        bottom:0;
+        outline: none;
+        color: transparent;
+        width: 100%;
+        box-shadow: border-box;
+        padding:6px 50px;
+        cursor: pointer;
+        transition: 0.5s;
+        background: rgb(21, 39, 51, 0.3);
+    }
+    .profilepic::-webkit-file-upload-button{
+        visibility: hidden;
+    }
+    .profilepic::before
+    {
+        content: '\f030';
+        font-family: fontAwesome;
+        font-size: 40px;
+        color:#fff;
+    }
+    .submit-btn{
+        padding: 8px 10px;
+        margin-top: 8px;
+        transition: 0.4s ease all;
+        float: left;
+    }
+    .submit-btn:hover{
+        padding: 9px 11px;
+        margin-top: 8px;
+        color: whitesmoke;
+        background-color: black;
+
+    }
+    .heading{
+        display: flex;
+        
+        color: whitesmoke;
+        margin-right: 10%;
+
+    }
+
+    .ir{
+        color: whitesmoke;
+    }
+    .irc{
+        
+        float: left;        
+        width: 100%;
+    }
+.error-msg{
+    color:red;
+
+    }
+    

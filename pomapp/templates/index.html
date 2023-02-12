@@ -1,0 +1,90 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Register</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{%static 'home/styles/css/index.css'%}">
+</head>
+<style type="text/css">
+	.card-image{
+		background-image: url("{%static '/home/styles/images/profileavathar.png'%}");
+	}
+</style>
+
+<body>
+	<div class="container">
+			<div class="heading">
+				<h1>Page of Memories &#9998;</h1>
+			</div>
+			
+		<div class="card-form"> 
+			<div class="form-container">
+				<form class="form" action="{%url 'Register'%}" method="POST"  enctype="multipart/form-data">
+					{%csrf_token%}
+			
+					<div class="card-image" id="selectedBanner">
+						  <input  class="profilepic"type="file" id="img" name="profilepic" accept="image/*" required>
+					</div>
+					<span class="ir"> Upload profile</span>
+					<label for = "name">User Name</label>
+					<input class="inputfields"type="text"  id= "name" placeholder="Enter your name" required name="username"> 
+					<label> Email</label>
+					<input class="inputfields"type="Email" placeholder="Enter your Email" required name="email">
+					<label> Password</label>
+					<input class="inputfields"type="password" placeholder="Enter your Password" required name="password1">
+					<label> Conform Password</label>
+					<input class="inputfields"type="password" placeholder="Re-Enter your Password" required name="password2">
+					<button class="submit-btn" type="submit">Submit </button> <br>
+					<div class="irc"><h4 class="ir"> If already registed . . </h> <a href="{%url 'login'%}">Click here </a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--
+    <script>
+      var selDiv = "";
+      var storedFiles = [];
+      $(document).ready(function () {
+        $("#img").on("change", handleFileSelect);
+        selDiv = $("#selectedBanner");
+      });
+
+      function handleFileSelect(e) {
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        filesArr.forEach(function (f) {
+          if (!f.type.match("image.*")) {
+            return;
+          }
+          storedFiles.push(f);
+
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            var html =
+              '<img src="' +
+              e.target.result +
+              "\" data-file='" +
+              f.name +
+              "alt='Category Image' height='150px' width='150px'>";
+            selDiv.html(html);
+          };
+          reader.readAsDataURL(f);
+        });
+      }
+    </script>
+    ---->
+
+</html>
+
+
